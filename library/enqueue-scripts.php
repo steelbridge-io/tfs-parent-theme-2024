@@ -36,9 +36,10 @@ endif;
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts()
 	{
+		wp_enqueue_style('custom-stylesheet', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), '2.10.4', 'all');
 
 		// Enqueue the main Stylesheet.
-		wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path('app.css'), array(), '2.10.4', 'all');
+		wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path('app.css'), );
 
 		wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
 			array(), '5.8.1', 'all');
