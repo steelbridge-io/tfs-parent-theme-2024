@@ -38,9 +38,20 @@ get_header(); ?>
 		</div>
 	</div>
     <?php endif; ?>
+    
+        <div class="grid-container full black-background">
+        <div class="row">
+            <div class="large-8 large-centered columns">
+                <!-- Begin Constant Contact Inline Form Code -->
+                <div class="ctct-inline-form" data-form-id="0ad001fb-1027-4de2-9265-5dede2414e0d"></div>
+                <!-- End Constant Contact Inline Form Code -->
+            </div>
+        </div>
+        </div>
+    
 
 	<div id="landing-content" class="grid-container margin-top-3">
-		
+  
 		<main class="main-content-full-width">
 		 <?php while ( have_posts() ) : the_post(); ?>
 		  <?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -69,25 +80,65 @@ $alt4 = get_post_meta ( $get_image_4_id, '_wp_attachment_image_alt', true );
 
 <?php if (!empty($grid_item_1_img)) : ?>
 
-    <div id="landing-grid" class="row small-up-1 medium-up-3 large-up-4 align-center">
+    <div id="landing-grid" class="row small-up-1 medium-up-3 large-up-4 align-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
         <div class="column column1">
-            <img class="thumbnail" src="<?php echo $grid_item_1_img ?>" alt="<?php echo $alt1 ?>">
+            <div class="flip-card" tabIndex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="thumbnail" src="<?php echo $grid_item_1_img ?>" alt="<?php echo $alt1 ?>">
+                    </div>
+                    <div class="flip-card-back">
+                        <?php $grid_item_1_cta = get_post_meta( $post->ID, 'grid-item-1-cta', TRUE ); ?>
+                        <p><?php echo $grid_item_1_cta; ?></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <?php if (!empty($grid_item_2_img)) : ?>
+	    <?php if (!empty($grid_item_2_img)) : ?>
         <div class="column column2">
-            <img class="thumbnail" src="<?php echo $grid_item_2_img ?>" alt="<?php echo $alt2 ?>">
-        </div>
-        <?php endif;
-        if (!empty($grid_item_3_img)) : ?>
-        <div class="column column3">
-            <img class="thumbnail" src="<?php echo $grid_item_3_img ?>" alt="<?php echo $alt3 ?>">
-        </div>
-        <?php endif;
-        if (!empty($grid_item_4_img)) : ?>
-        <div class="column column4">
-            <img class="thumbnail" src="<?php echo $grid_item_4_img ?>" alt="<?php echo $alt4 ?>">
+            <div class="flip-card" tabIndex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="thumbnail" src="<?php echo $grid_item_2_img ?>" alt="<?php echo $alt2 ?>">
+                    </div>
+                    <div class="flip-card-back">
+	                    <?php $grid_item_2_cta = get_post_meta( $post->ID, 'grid-item-2-cta', TRUE ); ?>
+                        <p><?php echo $grid_item_2_cta; ?></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <?php endif; ?>
+	    <?php if (!empty($grid_item_3_img)) : ?>
+         <div class="column column3">
+             <div class="flip-card" tabIndex="0">
+                 <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                         <img class="thumbnail" src="<?php echo $grid_item_3_img ?>" alt="<?php echo $alt3 ?>">
+                     </div>
+                     <div class="flip-card-back">
+	                     <?php $grid_item_3_cta = get_post_meta( $post->ID, 'grid-item-3-cta', TRUE ); ?>
+                         <p><?php echo $grid_item_3_cta; ?></p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+	    <?php endif; ?>
+	    <?php if (!empty($grid_item_4_img)) : ?>
+         <div class="column column4">
+             <div class="flip-card" tabIndex="0">
+                 <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                         <img class="thumbnail" src="<?php echo $grid_item_4_img ?>" alt="<?php echo $alt4 ?>">
+                     </div>
+                     <div class="flip-card-back">
+	                     <?php $grid_item_4_cta = get_post_meta( $post->ID, 'grid-item-4-cta', TRUE ); ?>
+                         <p><?php echo $grid_item_4_cta; ?></p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+	    <?php endif; ?>
     </div>
 
 <?php endif;
