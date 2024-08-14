@@ -36,8 +36,13 @@ endif;
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts()
 	{
-		wp_enqueue_style('custom-stylesheet', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), '2.10.4', 'all');
-
+		
+	wp_enqueue_style('custom-parent-stylesheet', get_stylesheet_directory_uri() . '/assets/css/parent-theme-tfs-custom.css', array(), '2.10.4', 'all');
+	
+		// TFS Parent Theme Options Plugin - Hero Image Opacity
+		if ( function_exists( 'load_opacity_range_css_landing_template' ) ) {
+			wp_add_inline_style( 'custom-parent-stylesheet', load_opacity_range_css_landing_template() );
+		}
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path('app.css'), );
 
