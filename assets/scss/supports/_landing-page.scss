@@ -36,9 +36,15 @@
 
 #landing-grid {
   margin: 1.618em auto;
+  padding-left: .9735rem;
+  padding-right: .9735rem;
   .thumbnail {
     height: 100%;
+    margin-bottom: 0 !important;
     object-fit: cover;
     width: 100%;
+  }
+  .column {
+    padding: .2em;
   }
 }
