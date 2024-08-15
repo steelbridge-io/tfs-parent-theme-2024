@@ -28,20 +28,20 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		// Let WordPress manage the document title
 		add_theme_support( 'title-tag' );
 
-		// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
+		// Add post thumbnail support: https://codex.wordpress.org/Post_Thumbnails
 		add_theme_support( 'post-thumbnails' );
 
 		// RSS thingy
 		add_theme_support( 'automatic-feed-links' );
 
-		// Add post formats support: http://codex.wordpress.org/Post_Formats
+		// Add post formats support: https://codex.wordpress.org/Post_Formats
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 
 		// Additional theme support for woocommerce 3.0.+
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
-    
+
     // Add Selective Refresh For Widgets
     add_theme_support( 'customize-selective-refresh-widgets' );
 
