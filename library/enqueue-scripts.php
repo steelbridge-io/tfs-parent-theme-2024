@@ -36,9 +36,9 @@ endif;
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts()
 	{
-		
-	wp_enqueue_style('custom-parent-stylesheet', get_stylesheet_directory_uri() . '/assets/css/parent-theme-tfs-custom.css', array(), '2.10.4', 'all');
-	
+
+	    wp_enqueue_style('custom-parent-stylesheet', get_stylesheet_directory_uri() . '/assets/css/parent-theme-tfs-custom.css', array(), '2.10.4', 'all');
+
 		// TFS Parent Theme Options Plugin - Hero Image Opacity
 		if ( function_exists( 'load_opacity_range_css_landing_template' ) ) {
 			wp_add_inline_style( 'custom-parent-stylesheet', load_opacity_range_css_landing_template() );
@@ -86,11 +86,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$slider_2_image1 = get_theme_mod('fp-slidertwo-one'); // Assigning it to a variable to keep the markup clean.
 
 		$css1 .= (!empty($slider_2_image1)) ? sprintf('
-    li.orbit-item-1 {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    }
-    ', $slider_2_image1) : '';
+        li.orbit-item-1 {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        }
+        ', $slider_2_image1) : '';
 
 		if ($css1) {
 			wp_add_inline_style($slider2img1, $css1);
@@ -103,11 +103,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$slider_2_image2 = get_theme_mod('fp-slidertwo-two'); // Assigning it to a variable to keep the markup clean.
 
 		$css2 .= (!empty($slider_2_image2)) ? sprintf('
-    li.orbit-item-2 {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    }
-    ', $slider_2_image2) : '';
+        li.orbit-item-2 {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        }
+        ', $slider_2_image2) : '';
 
 		if ($css2) {
 			wp_add_inline_style($slider2img2, $css2);
@@ -120,11 +120,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$slider_2_image3 = get_theme_mod('fp-slidertwo-three'); // Assigning it to a variable to keep the markup clean.
 
 		$css3 .= (!empty($slider_2_image3)) ? sprintf('
-    li.orbit-item-3 {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    }
-    ', $slider_2_image3) : '';
+        li.orbit-item-3 {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        }
+        ', $slider_2_image3) : '';
 
 		if ($css3) {
 			wp_add_inline_style($slider2img3, $css3);
@@ -137,11 +137,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$slider_2_image4 = get_theme_mod('fp-slidertwo-four'); // Assigning it to a variable to keep the markup clean.
 
 		$css4 .= (!empty($slider_2_image4)) ? sprintf('
-    li.orbit-item-4 {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    }
-    ', $slider_2_image4) : '';
+        li.orbit-item-4 {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        }
+        ', $slider_2_image4) : '';
 
 		if ($css4) {
 			wp_add_inline_style($slider2img4, $css4);
@@ -154,9 +154,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$movie_comment_color = get_theme_mod('movie-comment-color');
 
 		$commentcolor .= (!empty($movie_comment_color)) ? sprintf('
-    #message span.fp-movie-comment {
-    	color:' . $movie_comment_color . ';
-    } ') : '';
+        #message span.fp-movie-comment {
+            color:' . $movie_comment_color . ';
+        } ') : '';
 
 		if ($commentcolor) {
 			wp_add_inline_style($movie_text_color, $commentcolor);
@@ -169,19 +169,19 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$top_cardimage = get_theme_mod('fp-topcard-img'); // Assigning it to a variable to keep the markup clean.
 
 		$css_topcardimage .= (!empty($top_cardimage)) ? sprintf('
-    .topcard.card .card-divider::after {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    content: "";
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-    }
-    ', $top_cardimage) : '';
+        .topcard.card .card-divider::after {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        content: "";
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+        }
+        ', $top_cardimage) : '';
 
 		if ($css_topcardimage) {
 			wp_add_inline_style($topcardimage, $css_topcardimage);
@@ -194,19 +194,19 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$bottom_cardimage = get_theme_mod('fp-bottomcard-img'); // Assigning it to a variable to keep the markup clean.
 
 		$css_bottomcardimage .= (!empty($bottom_cardimage)) ? sprintf('
-    .bottomcard.card .card-divider::after {
-    background: url(%s) no-repeat center;
-    background-size: cover;
-    content: "";
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-    }
-    ', $bottom_cardimage) : '';
+        .bottomcard.card .card-divider::after {
+        background: url(%s) no-repeat center;
+        background-size: cover;
+        content: "";
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+        }
+        ', $bottom_cardimage) : '';
 
 		if ($css_bottomcardimage) {
 			wp_add_inline_style($bottomcardimage, $css_bottomcardimage);
@@ -221,9 +221,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$bottomgradient_color = get_theme_mod('fp-bottom-gradient-bg');
 
 		$css_topgradientcolor .= (!empty($topgradient_color)) ? sprintf('
-    body.home.page-template-front {
-      background: ' . $topgradient_color . ';
-    }') : '';
+        body.home.page-template-front {
+          background: ' . $topgradient_color . ';
+        }') : '';
 
 		if ($css_topgradientcolor) {
 			wp_add_inline_style($topgradientcolor, $css_topgradientcolor);
@@ -237,22 +237,22 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		$fptoptxtcolor_color = get_theme_mod('fp-top-widget-txt-color');
 
 		$css_fptopbgcolor .= (!empty($fptopbgcolor_color)) ? sprintf('
-    #top-cta {
-      background-color: ' . $fptopbgcolor_color . ';
-    }
-    #top-cta, #top-cta h2, #top-cta p {
-    	color: ' . $fptoptxtcolor_color . ';
-		}
-    ') : '';
+        #top-cta {
+          background-color: ' . $fptopbgcolor_color . ';
+        }
+        #top-cta, #top-cta h2, #top-cta p {
+            color: ' . $fptoptxtcolor_color . ';
+            }
+        ') : '';
 
 		if ( $css_fptopbgcolor ) {
 			wp_add_inline_style( $fptopbgcolor  , $css_fptopbgcolor );
 		}
 
-    // Parallax Stuff
+        // Parallax Stuff
 		$parallax_label_colors = 'main-stylesheet';
 
-    $css_parallax_label_colors = '';
+        $css_parallax_label_colors = '';
 
 		$fp_toppara_color			= get_theme_mod ( 'fp-toppara-color' );
 		$fp_divider_color					= get_theme_mod ( 'fp-divider-color' );
@@ -512,6 +512,6 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		if( $socialmedia_title_link_color ) {
 			wp_add_inline_style( $socialmedia_title_link, $socialmedia_title_link_color );
 		}
-	} 
-  endif; 
+	}
+    endif;
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
