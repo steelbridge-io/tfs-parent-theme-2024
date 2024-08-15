@@ -1,11 +1,34 @@
 /** Landing Page Template */
 @import "varibales/colors/colors";
+
+.landing-cta {
+  .landing-cta-left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: $smoke-white;
+  }
+  .ctct-gdpr-text {
+    display: none;
+  }
+  button.button.has-tip {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.tooltip {
+  max-width: 37rem !important;
+}
+
 #landing-hero-cont {
   position: relative;
   min-height: 600px;
   overflow: hidden;
-
-  /* Let's make this a flex container to center its child elements */
   display: flex;
   align-items: center;
   justify-content: center;
