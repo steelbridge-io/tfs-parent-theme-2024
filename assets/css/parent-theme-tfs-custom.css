@@ -25,20 +25,29 @@ Custom CSS
 .black-background {
   background-color: #000000; }
 
-.landing-cta .landing-cta-left {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  color: #f5f5f5; }
-.landing-cta .ctct-gdpr-text {
-  display: none; }
-.landing-cta button.button.has-tip {
-  padding: 0;
-  background-color: transparent;
-  border: none; }
+.landing-cta {
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .landing-cta .landing-cta-left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #f5f5f5; }
+  .landing-cta .ctct-gdpr-text {
+    display: none; }
+  .landing-cta button.button.has-tip {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin: 0; }
+  .landing-cta .landing-cta-cont {
+    color: #f5f5f5;
+    text-align: center; }
+    .landing-cta .landing-cta-cont .ctct-inline-form .ctct-form-container .ctct-form-defaults {
+      padding: 0 24px; }
 
 .tooltip {
   max-width: 37rem !important; }

@@ -2,6 +2,8 @@
 @import "varibales/colors/colors";
 
 .landing-cta {
+  padding-top: 24px;
+  padding-bottom: 24px;
   .landing-cta-left {
     display: flex;
     flex-direction: column;
@@ -18,6 +20,18 @@
     padding: 0;
     background-color: transparent;
     border: none;
+    margin: 0;
+  }
+  .landing-cta-cont {
+    color: $smoke-white;
+    text-align: center;
+    .ctct-inline-form {
+      .ctct-form-container {
+        .ctct-form-defaults {
+          padding: 0 24px;
+        }
+      }
+    }
   }
 }
 
