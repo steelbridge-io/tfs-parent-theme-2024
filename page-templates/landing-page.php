@@ -23,41 +23,48 @@ get_header(); ?>
         <div class="overlay"></div>
 		<img class="landing-hero" src="<?php echo $landing_page_image ?>" alt="<?php echo $landing_page_image_alt ?>">
 		<div class="landing-content">
-            
+
             <img class="hero-image" src="<?php echo $landing_page_logo ?>" alt="<?php echo $landing_page_logo_alt ?>">
-         
+
 			<?php
 				$title = get_the_title($post->ID);
 				    echo '<h1>' . $title . '</h1>';
-                
+
                 if(!empty($landing_page_desc)) {
                     echo '<h2>' . $landing_page_desc . '</h2>';
                 }
 				?>
-    
+
 		</div>
 	</div>
     <?php endif; ?>
-    
-        <div class="grid-container full black-background">
+
+    <div class="landing-cta grid-container full black-background">
         <div class="row">
-            <div class="large-8 large-centered columns">
+            <div class="landing-cta-left large-6 large-centered columns">
+                <h2>Some Content</h2>
+                <p>A paragraph.</p>
+                <button class="button" type="button" data-hover-delay="100" data-tooltip tabindex="1" title="By submitting this form, you are consenting to receive marketing emails from: The Fly Shop, 4140 Churn Creek Road, Redding, CA, 96002, US, https://www.theflyshop.com/. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <a href='https://www.constantcontact.com/legal/about-constant-contact' title='GDPR'>Emails are serviced by Constant Contact</a>" data-position="top" data-alignment="center">
+                    <i class="fas fa-question-circle fa-2x"></i>
+                </button>
+            </div>
+            <div class="landing-cta-right large-6 large-centered columns">
                 <!-- Begin Constant Contact Inline Form Code -->
                 <div class="ctct-inline-form" data-form-id="0ad001fb-1027-4de2-9265-5dede2414e0d"></div>
                 <!-- End Constant Contact Inline Form Code -->
             </div>
         </div>
-        </div>
-    
+    </div>
+
 
 	<div id="landing-content" class="grid-container margin-top-3">
-  
+
 		<main class="main-content-full-width">
 		 <?php while ( have_posts() ) : the_post(); ?>
 		  <?php get_template_part( 'template-parts/content', 'page' ); ?>
 		 <?php endwhile; ?>
 		</main>
-	
+
 	</div>
 
 <?php
