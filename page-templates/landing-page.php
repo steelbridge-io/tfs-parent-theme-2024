@@ -5,13 +5,11 @@ Template Name: Landing Page
 $landing_page_logo	= get_post_meta(get_the_ID(), 'landing-page-logo', true);
 $landing_page_image = get_post_meta(get_the_ID(), 'landing-page-image', true);
 $landing_page_desc  = get_post_meta(get_the_ID(), 'landing-page-desc', true);
-
 $landing_page_logo_id   = attachment_url_to_postid($landing_page_logo);
 $landing_page_image_id  = attachment_url_to_postid($landing_page_image);
-
-$landing_page_logo_alt   = get_post_meta($landing_page_logo_id, '_wp_attachment_image_alt', TRUE);
-$landing_page_image_alt  = get_post_meta($landing_page_image_id, '_wp_attachment_image_alt', TRUE);
-
+$landing_page_logo_alt   = get_post_meta($landing_page_logo_id, '_wp_attachment_image_alt', true);
+$landing_page_image_alt  = get_post_meta($landing_page_image_id, '_wp_attachment_image_alt', true);
+$landing_page_cta     = get_post_meta(get_the_ID(), 'landing-page-cta', true);
 $landing_page_title     = get_post_meta(get_the_ID(), 'landing-page-title', true);
 
 global $post;
@@ -41,9 +39,11 @@ get_header(); ?>
 
     <div class="landing-cta grid-container full black-background">
         <div class="row">
+            <?php if (!empty($landing_page_cta)) : ?>
             <div class="landing-cta-left large-6 large-centered columns">
-                <h2>Some Content</h2>
-                <p>A paragraph.</p>
+                <div class="cta-content">
+                    <?php echo $landing_page_cta; ?>
+                </div>
                 <button class="button" type="button" data-hover-delay="100" data-tooltip tabindex="1" title="By submitting this form, you are consenting to receive marketing emails from: The Fly Shop, 4140 Churn Creek Road, Redding, CA, 96002, US, https://www.theflyshop.com/. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <a href='https://www.constantcontact.com/legal/about-constant-contact' title='GDPR'>Emails are serviced by Constant Contact</a>" data-position="top" data-alignment="center">
                     <i class="fas fa-question-circle fa-2x"></i>
                 </button>
@@ -53,6 +53,18 @@ get_header(); ?>
                 <div class="ctct-inline-form" data-form-id="0ad001fb-1027-4de2-9265-5dede2414e0d"></div>
                 <!-- End Constant Contact Inline Form Code -->
             </div>
+
+            <?php else : ?>
+
+            <div class="landing-cta-cont large-8 large-centered columns">
+                <h2>Please Subscribe To <?php echo the_title(); ?> News <button class="button" type="button" data-hover-delay="100" data-tooltip tabindex="1" title="By submitting this form, you are consenting to receive marketing emails from: The Fly Shop, 4140 Churn Creek Road, Redding, CA, 96002, US, https://www.theflyshop.com/. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. Emails are serviced by Constant Contact." data-position="top" data-alignment="center">
+                        <i class="fas fa-question-circle fa-2x"></i>
+                    </button> </h2>
+                <!-- Begin Constant Contact Inline Form Code -->
+                <div class="ctct-inline-form" data-form-id="0ad001fb-1027-4de2-9265-5dede2414e0d"></div>
+                <!-- End Constant Contact Inline Form Code -->
+            </div>
+            <?php endif; ?>
         </div>
     </div>
 
