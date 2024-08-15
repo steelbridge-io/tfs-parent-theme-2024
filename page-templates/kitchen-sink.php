@@ -67,7 +67,7 @@ get_header(); ?>
                             <div class="medium-6 columns">
                                 <label>
                                     URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
-                                    <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
+                                    <input type="text" placeholder="https://foundation.zurb.com" pattern="url">
                                 </label>
                             </div>
                             <div class="medium-6 columns">
@@ -554,7 +554,7 @@ get_header(); ?>
                     <h2 id="media-object" class="docs-heading" data-magellan-target="media-object"><a href="#media-object"></a>Media Object</h2>
                     <div class="media-object">
                         <div class="media-object-section">
-                            <img src= "http://placeimg.com/200/200/people">
+                            <img src= "https://placeimg.com/200/200/people">
                         </div>
                         <div class="media-object-section">
                             <h4>Dreams feel real while we're in them.</h4>
