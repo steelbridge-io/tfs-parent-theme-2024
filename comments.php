@@ -8,6 +8,22 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
+/**
+ * Display pagination for comments
+ */
+function foundationpress_the_comments_pagination($args = []) {
+ // Use WordPress core function with custom styling
+ $defaults = [
+	'prev_text' => __('&laquo; Previous', 'foundationpress'),
+	'next_text' => __('Next &raquo;', 'foundationpress'),
+	'screen_reader_text' => __('Comments navigation', 'foundationpress'),
+ ];
+
+ $args = wp_parse_args($args, $defaults);
+
+ the_comments_pagination($args);
+}
+
 
 if ( have_comments() ) :
 ?>
